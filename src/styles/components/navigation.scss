@@ -1,0 +1,44 @@
+.navigation {
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 5%;
+      right: 5%;
+      bottom: 0;
+      height: 1px;
+      background-color: #fff;
+    }
+    &-item {
+      margin-left: 2rem;
+      margin-right: 2rem;
+      padding: 2rem 0;
+      a {
+        font-family: "PT Sans", sans-serif;
+        font-size: $font-sm;
+        text-transform: uppercase;
+        color: $text-200;
+      }
+    }
+  }
+  &.contrast {
+    .navigation {
+      &-list {
+        &-item {
+          a {
+            color: $text-100;
+          }
+        }
+        &:after {
+          background-color: $text-100;
+        }
+      }
+    }
+  }
+}

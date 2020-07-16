@@ -1,44 +1,107 @@
 .navigation {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    &-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      display: flex;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        bottom: 0;
+        height: 1px;
+        background-color: #fff;
+      }
+      &-item {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding: 2rem 0;
+        a {
+          font-family: "PT Sans", sans-serif;
+          font-size: $font-sm;
+          text-transform: uppercase;
+          color: $text-200;
+        }
+      }
+    }
+    &.contrast {
+      .navigation {
+        &-list {
+          &-item {
+            a {
+              color: $text-100;
+            }
+          }
+          &:after {
+            background-color: $text-100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-nav,
+.mobile-nav-toggler {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.mobile-nav-toggler {
+  background: none;
+  border: none;
+  color: $text-200;
+  padding: 1rem;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-size: $font-sm;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.mobile-nav {
   &-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
     position: relative;
-    &:after {
+    transform: translateX(-100%);
+    transition: 0.3s transform ease-in-out;
+    &:before {
       content: "";
       position: absolute;
-      left: 5%;
-      right: 5%;
-      bottom: 0;
-      height: 1px;
+      left: 0;
+      right: 50%;
+      top: 0;
       background-color: #fff;
+      height: 1px;
+      transform: translateX(-100%);
+      transition: 0.3s transform ease-in-out;
     }
-    &-item {
-      margin-left: 2rem;
-      margin-right: 2rem;
-      padding: 2rem 0;
-      a {
-        font-family: "PT Sans", sans-serif;
-        font-size: $font-sm;
-        text-transform: uppercase;
-        color: $text-200;
+  }
+  &-open {
+    .mobile-nav-list {
+      transform: translateX(0);
+      &:before {
+        transform: translateX(0);
       }
     }
   }
-  &.contrast {
-    .navigation {
-      &-list {
-        &-item {
-          a {
-            color: $text-100;
-          }
-        }
-        &:after {
-          background-color: $text-100;
-        }
-      }
-    }
+  &-item {
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+    color: $text-200;
+    font-size: $font-sm;
+    position: relative;
   }
 }

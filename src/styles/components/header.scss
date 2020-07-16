@@ -1,12 +1,13 @@
 .header {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 6rem;
-  bottom: calc(100% - 6rem);
-  transition: 0.5s bottom ease-in-out;
-
-  &.scrolled {
-    bottom: calc(0% - 6rem);
+  @media (min-width: $tablet) {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 6rem;
+    bottom: calc(100% - 6rem);
+    transition: 0.5s bottom ease-in-out;
+    &.scrolled {
+      bottom: calc(0% - 6rem);
+    }
   }
 }

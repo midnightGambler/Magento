@@ -1,5 +1,14 @@
 .section-main {
-  background-image: url("./img/bg.jpg");
+  height: 50vh;
+  background-image: url("./img/mobile-bg.jpg");
   background-position: center top;
   background-size: cover;
+  background-repeat: no-repeat;
+  @media (min-width: $mobile) {
+    background-image: url("./img/bg.jpg");
+  }
+  @media (min-width: $tablet) {
+    background-image: url("./img/bg.jpg");
+    height: 100vh;
+  }
 }

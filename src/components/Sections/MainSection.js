@@ -3,7 +3,6 @@ import { Header } from "../Header/Header";
 import { Scroller } from "../Scroller/Scroller";
 
 export const MainSection = () => {
-  console.log("test");
   return (
     <section className="section section-main">
       <Header />

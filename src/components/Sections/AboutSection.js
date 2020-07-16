@@ -2,6 +2,7 @@ import React from "react";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import jasonMobile from "../../styles/img/jason-wood-mb.jpg";
 import jasonTablet from "../../styles/img/jason-wood-lg.jpg";
+import { Scroller } from "../Scroller/Scroller";
 
 export const AboutSection = () => {
   return (
@@ -29,6 +30,7 @@ export const AboutSection = () => {
         </p>
         <p className="sign">Jason Wood</p>
       </article>
+      <Scroller>keep scrolling, there is still more to come.</Scroller>
     </section>
   );
 };

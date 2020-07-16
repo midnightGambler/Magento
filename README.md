@@ -1,3 +1,3 @@
 [Link to Deploy]
 
-[link to deploy]: https://midnightgambler.github.io/Nimax/
+[link to deploy]: https://midnightgambler.github.io/Magento/

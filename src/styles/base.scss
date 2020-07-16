@@ -1,5 +1,6 @@
 * {
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,9 +26,20 @@ $text-200: #ffffff;
 $font-xs: 18px;
 $font-sm: 24px;
 $font-m: 36px;
-$font-xl: 48px;
+$font-lg: 48px;
+$font-xl: 60px;
+
+$font-xl-mb: 30px;
 
 // breakpoints
 
 $mobile: 375px;
 $tablet: 768px;
+$desktop: 1024px;
+
+// common classes
+.mobile-hidden {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}

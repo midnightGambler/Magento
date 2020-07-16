@@ -8,6 +8,12 @@
     transition: 0.5s bottom ease-in-out;
     &.scrolled {
       bottom: calc(0% - 6rem);
+      border-bottom: 1px solid $text-100;
+    }
+  }
+  @media (min-width: $desktop) {
+    &.scrolled {
+      border-bottom: none;
     }
   }
 }

@@ -40,6 +40,19 @@
             }
           }
           &:after {
+            content: initial;
+            background-color: $text-100;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: $desktop) {
+    &.contrast {
+      .navigation {
+        &-list {
+          &:after {
+            content: "";
             background-color: $text-100;
           }
         }

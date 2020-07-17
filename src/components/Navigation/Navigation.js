@@ -18,7 +18,7 @@ export const Navigation = ({ contrast }) => {
         onClick={toggleMobileNav.bind(null, !isMobileNavOpen)}
         className="mobile-nav-toggler"
       >
-        Menu
+        ∞ Menu
       </button>
       <nav className={cn({ "mobile-nav-open": isMobileNavOpen }, "mobile-nav")}>
         <ul className="mobile-nav-list">
